@@ -100,9 +100,19 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+  const randomElement = Math.floor(Math.random() * arr.length);
+  return arr[randomElement];
+}
 
-function pickMystery() {}
+function pickMystery() {
+  const randomCard = {
+    suspect: selectRandom(suspectsArray),
+    room: selectRandom(roomsArray),
+    weapon: selectRandom(weaponsArray),
+  };
+  return randomCard;
+}
 
 // ITERATION 3
 
